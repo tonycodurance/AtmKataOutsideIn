@@ -9,15 +9,15 @@ namespace BankAccountKataOI
             var transactionTypeSection = "";
             if (transaction is Credit)
             {
-                transactionTypeSection = $"|| {transaction.Amount} || ||";
+                transactionTypeSection = $"|| {transaction.Amount:F} || ||";
             }
 
             if (transaction is Debit)
             {
-                transactionTypeSection = $"|| || {Math.Abs(transaction.Amount)} ||";
+                transactionTypeSection = $"|| || {Math.Abs(transaction.Amount):F} ||";
             }
 
-            return $"{transaction.Date:dd/MM/yy} {transactionTypeSection} {balance}";
+            return $"{transaction.Date:dd/MM/yyyy} {transactionTypeSection} {balance:F}";
         }
     }
 }

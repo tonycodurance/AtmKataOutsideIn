@@ -19,9 +19,9 @@ namespace BankAccountKataOITests
         private static IEnumerable TestCases()
         {
             yield return new TestCaseData(new Credit(200m, new DateTime(2015, 07, 10)), 300m).Returns(
-                "10/07/15 || 200 || || 300");
+                "10/07/2015 || 200.00 || || 300.00");
             yield return new TestCaseData(new Debit(100m, new DateTime(2020, 03, 12)), 400m).Returns(
-                "12/03/20 || || 100 || 400");
+                "12/03/2020 || || 100.00 || 400.00");
         }
     }
 }

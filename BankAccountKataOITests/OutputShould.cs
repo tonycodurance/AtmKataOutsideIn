@@ -18,7 +18,7 @@ namespace BankAccountKataOITests
                 //Arrange
                 Console.SetOut(stringWriter);
                 var output = new Output();
-                var expected = $"{_dateTime:dd/MM/yy} || 150 || || 150\n";
+                var expected = $"{_dateTime:dd/MM/yyyy} || 150.00 || || 150.00\n";
                 
                 //Act
                 output.PrintLine(expected);
