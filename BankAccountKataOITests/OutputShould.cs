@@ -15,15 +15,12 @@ namespace BankAccountKataOITests
         {
             using (var stringWriter = new StringWriter())
             {
-                //Arrange
                 Console.SetOut(stringWriter);
                 var output = new Output();
                 var expected = $"{_dateTime:dd/MM/yyyy} || 150.00 || || 150.00\n";
                 
-                //Act
                 output.PrintLine(expected);
 
-                //Assert
                 Assert.AreEqual(expected, stringWriter.ToString());
             }
         }
@@ -33,16 +30,13 @@ namespace BankAccountKataOITests
         {
             using (var stringWriter = new StringWriter())
             {
-                //Arrange
                 Console.SetOut(stringWriter);
                 var output = new Output();
                 const string header = "date || credit || debit || balance";
                 const string expected = header + "\n";
                 
-                //Act
                 output.PrintLine(header);
 
-                //Assert
                 Assert.AreEqual(expected, stringWriter.ToString());
             }
         }

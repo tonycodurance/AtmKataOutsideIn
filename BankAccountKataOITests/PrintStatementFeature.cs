@@ -26,15 +26,12 @@ namespace BankAccountKataOITests
         [Test]
         public void PrintStatement()
         {
-            //Arrange
             _atm.Deposit(250);
             _atm.Withdraw(50);
             _atm.Deposit(150);
 
-            //Act
             _atm.PrintStatement();
 
-            //Assert
             _outPutMock.Verify(o => o.PrintHeader(), Times.Once);
             _outPutMock.Verify(o => o.PrintLine("06/03/2016 || 250.00 || || 250.00"), Times.Once);
             _outPutMock.Verify(o => o.PrintLine("06/03/2016 || || 50.00 || 200.00"), Times.Once);
