@@ -25,18 +25,5 @@ namespace BankAccountKataOI
         {
             return _transactions;
         }
-
-        public virtual decimal GetBalanceFor(Transaction transaction)
-        {
-            var transactionIndex = _transactions.FindIndex(t => t == transaction);
-
-            decimal balance = 0;
-            for (var i = 0; i <= transactionIndex; i++)
-            {
-                balance += _transactions[i].Amount;
-            }
-            
-            return balance;
-        }
     }
 }

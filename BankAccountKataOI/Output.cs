@@ -9,9 +9,9 @@ namespace BankAccountKataOI
             Console.WriteLine(formattedTransaction);
         }
 
-        public virtual void PrintHeader()
+        public virtual void PrintHeader(string header)
         {
-            Console.WriteLine("date || credit || debit || balance");
+            Console.WriteLine(header);
         }
     }
 }
